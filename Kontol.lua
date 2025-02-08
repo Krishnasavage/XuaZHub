@@ -11,7 +11,7 @@ local Success, Error = pcall(function()
 	Start = os.clock()
 	local NO_HOOKING = false
 
-	local Version = 2.0.4.5.2.1.0
+	local Version = 2.0
 	local SubVersion = "ALWAYS ON TOP"
 	local Debugging = true
 	local Title = "KINA HUB"
