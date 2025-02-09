@@ -1154,8 +1154,8 @@ local Success, Error = pcall(function()
 
 	SaveManager:SetIgnoreIndexes({ "MenuKeybind" })
 
-	ThemeManager:SetFolder("kina_fisch")
-	SaveManager:SetFolder("kina_fisch/main")
+	ThemeManager:SetFolder("sasware_fisch")
+	SaveManager:SetFolder("sasware_fisch/main")
 
 	SaveManager:BuildConfigSection(Tabs.Settings)
 
