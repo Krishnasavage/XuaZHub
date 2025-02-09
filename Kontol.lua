@@ -90,8 +90,8 @@ local Success, Error = pcall(function()
 		setthreadidentity = function(...) end -- i hate you solara
 	end
 
-	if getgenv().sasware_fisch_unload then
-		pcall(getgenv().sasware_fisch_unload)
+	if getgenv().kinahub_fisch_unload then
+		pcall(getgenv().kinahub_fisch_unload)
 	end
 
 	local function Unimplemented()
@@ -596,14 +596,14 @@ local Success, Error = pcall(function()
 
 		getgenv().Toggles = nil
 		getgenv().Options = nil
-		getgenv().sasware_fisch_unload = nil
+		getgenv().kinahub_fisch_unload = nil
 
 		Utils.GenericToast(3, "Unloaded successfully!")
 
 		Unloaded = true
 	end
 
-	getgenv().sasware_fisch_unload = Unload
+	getgenv().kinahub_fisch_unload = Unload
 
 	-- Load bypasses
 
@@ -1154,8 +1154,8 @@ local Success, Error = pcall(function()
 
 	SaveManager:SetIgnoreIndexes({ "MenuKeybind" })
 
-	ThemeManager:SetFolder("sasware_fisch")
-	SaveManager:SetFolder("sasware_fisch/main")
+	ThemeManager:SetFolder("kinahub_fisch")
+	SaveManager:SetFolder("kinahub_fisch/main")
 
 	SaveManager:BuildConfigSection(Tabs.Settings)
 
@@ -1715,4 +1715,4 @@ if not Success then
 end
 
 -- task.wait(220)
--- getgenv().sasware_fisch_unload()
+-- getgenv().kinahub_fisch_unload()
