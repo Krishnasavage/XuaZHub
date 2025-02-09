@@ -11,7 +11,7 @@ local Success, Error = pcall(function()
 	Start = os.clock()
 	local NO_HOOKING = false
 
-	local Version = 2
+	local Version = 2.0
 	local SubVersion = "ALWAYS ON TOP"
 	local Debugging = true
 	local Title = "KINA HUB"
@@ -36,7 +36,7 @@ local Success, Error = pcall(function()
 		Players.LocalPlayer:Kick("PlaceVersionTooHigh | " .. game.PlaceVersion .. " > " .. PreloadConstants.PlaceVersionSupport)
 	end
 
-	local Toasts = loadstring(game:HttpGet("https://raw.githubusercontent.com/centerepic/kinahub-fisch/refs/heads/main/toasts.lua"))()
+	local Toasts = loadstring(game:HttpGet("https://raw.githubusercontent.com/centerepic/sasware-fisch/refs/heads/main/toasts.lua"))()
 
 	do
 		VeryImportantPart.Name = "SpawnBox"
@@ -90,8 +90,8 @@ local Success, Error = pcall(function()
 		setthreadidentity = function(...) end -- i hate you solara
 	end
 
-	if getgenv().kinahub_fisch_unload then
-		pcall(getgenv().kinahub_fisch_unload)
+	if getgenv().sasware_fisch_unload then
+		pcall(getgenv().sasware_fisch_unload)
 	end
 
 	local function Unimplemented()
@@ -596,14 +596,14 @@ local Success, Error = pcall(function()
 
 		getgenv().Toggles = nil
 		getgenv().Options = nil
-		getgenv().kinahub_fisch_unload = nil
+		getgenv().sasware_fisch_unload = nil
 
 		Utils.GenericToast(3, "Unloaded successfully!")
 
 		Unloaded = true
 	end
 
-	getgenv().kinahub_fisch_unload = Unload
+	getgenv().sasware_fisch_unload = Unload
 
 	-- Load bypasses
 
@@ -616,7 +616,7 @@ local Success, Error = pcall(function()
 			end)
 	
 			if not Success then
-				LocalPlayer:Kick("Failed to load KinaGuard! " .. Error)
+				LocalPlayer:Kick("Failed to load SasGuard! " .. Error)
 			end
 		end
 	end
@@ -1154,8 +1154,8 @@ local Success, Error = pcall(function()
 
 	SaveManager:SetIgnoreIndexes({ "MenuKeybind" })
 
-	ThemeManager:SetFolder("kinahub_fisch")
-	SaveManager:SetFolder("kinahub_fisch/main")
+	ThemeManager:SetFolder("kina_fisch")
+	SaveManager:SetFolder("kina_fisch/main")
 
 	SaveManager:BuildConfigSection(Tabs.Settings)
 
@@ -1715,4 +1715,4 @@ if not Success then
 end
 
 -- task.wait(220)
--- getgenv().kinahub_fisch_unload()
+-- getgenv().sasware_fisch_unload()
