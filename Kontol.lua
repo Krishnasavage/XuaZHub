@@ -2,10 +2,7 @@
 --!optimize 2
 --!native
 
-local PreloadConstants = {
-	PlaceVersionSupport = 3840,
-	BypassVersion = "V3"
-}
+local 
 
 local Success, Error = pcall(function()
 	Start = os.clock()
@@ -32,9 +29,7 @@ local Success, Error = pcall(function()
 	-- 												  it's scuffed but works on literally any exec
 
 	-- Check PlaceVersion 
-	if game.PlaceVersion > PreloadConstants.PlaceVersionSupport then
-		Players.LocalPlayer:Kick("PlaceVersionTooHigh | " .. game.PlaceVersion .. " > " .. PreloadConstants.PlaceVersionSupport)
-	end
+	
 
 	local Toasts = loadstring(game:HttpGet("https://raw.githubusercontent.com/centerepic/sasware-fisch/refs/heads/main/toasts.lua"))()
 
